@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAR-DOGR Portal</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+ 
+    <div class="container-fluid">
+       <div>
+        <h2 class="text-center alert alert-danger"> ICAR-DOGR, PUNE </h2>
+    </div>
+
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="/diary">INWARD DIARY</a></li>
+                    <li class="list-group-item"><a href="/outward">DESPATCH</a></li>
+                    <li class="list-group-item"><a href="/report">INWARD REPORT</a></li>
+                    <li class="list-group-item"><a href="/invoice">INVOICE</a></li>
+                    <li class="list-group-item"><a href="/gemReport">GEM REPORT</a></li>
+                    <li class="list-group-item"><a href="/users">EMPLOYEE</a></li>
+                    <li class="list-group-item"><a href="/vendor">VENDORS</a></li>
+                    <li class="list-group-item"><a href="/accounts">ACCOUNTS</a></li>
+                    <li class="list-group-item"><a href="/category">CATEGORY</a></li>
+                    <li class="list-group-item"><a href="/register">REGISTER</a></li>
+                    <li class="list-group-item"><a href="/lettertype">DOCUMENT TYPE</a></li>
+                    <li class="list-group-item"><a href="/diaryreport">Diary Report</a></li>
+                    <li class="list-group-item"><a href="/outwardreport">Outward Report</a></li>
+                    <li class="list-group-item"><a href="/invoicereport">Issue Register</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+       		{% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

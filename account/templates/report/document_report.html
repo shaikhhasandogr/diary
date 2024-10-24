@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Report</title>
+</head>
+<body>
+    <h1>Document Report</h1>
+    <table border="1">
+        <tr>
+            <th>Document Number</th>
+            <th>Received Date</th>
+            <th>Received From</th>
+            <th>Document Type</th>
+            <th>Language</th>
+            <th>Remark</th>
+        </tr>
+        {% for document in documents %}
+        <tr>
+            <td>{{ document.doc_no }}</td>
+            <td>{{ document.received_date }}</td>
+            <td>{{ document.received_from }}</td>
+            <td>{{ document.doc_type }}</td>
+            <td>{{ document.language }}</td>
+            <td>{{ document.remark }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
